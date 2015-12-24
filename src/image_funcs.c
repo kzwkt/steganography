@@ -61,8 +61,6 @@ writeImage( char fileName[], Image *image )
 		}
 	}
 	fclose( out );
-	free( image->data );
-	free( image );
 }
 
 void
@@ -77,6 +75,7 @@ readPayload( char *fileName, Payload *payload )
 	int i;
 	for( i = 0; i < payload->size; i++ )
 		payload->data[i] = storage[i];
+	fclose( pf );
 }
 
 void

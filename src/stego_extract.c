@@ -6,7 +6,7 @@ void
 main( int argc, char *argv[] )
 {
 	if( argc != 3 )
-		error( "Must provide an image with imbedded information and an output file!" );
+		error( "Must provide an image with embedded information and an output file!" );
 	Image *image = malloc( sizeof( Image ) );
 	if( image == NULL )
 		error( "Ran out of memory when allocating memory for the image!" );

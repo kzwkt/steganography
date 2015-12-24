@@ -19,6 +19,10 @@ main( int argc, char *argv[] )
 		error( "The file is not large enough to embed the payload!" );
 	stego( image, payload );
 	writeImage( argv[2], image );
+    free( image->data );
+    free( image );
+    free( payload->data );
+    free( payload );
 }
 
 void
